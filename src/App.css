@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -13,20 +14,140 @@
   }
 }
 
+footer {
+  height: 48px;
+  border-top: 1px solid #ccc;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  height: 48px;
+}
+
+.Header-button {
+  height: 100%;
+  width: 100px;
+  background-color: transparent;
+  border: 0px;
+  border-left:1px solid #ccc;
+}
+.Header-button:hover {
+  background-image: linear-gradient(white,#ccc);
+}
+button:hover {
+  cursor: pointer;
+}
+.Float {
+  right: 16px;
+  bottom: 24px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  position: fixed;
+  height: 56px;
+  width: 56px;
+  cursor: pointer;
+  box-shadow: inset 0 0px 0px 0 #0000000f, 0 2px 32px 0 #00000029;
+}
+
+@keyframes fade {
+  0% {opacity: 0%;}
+  50% {opacity: 100%;}
+  60% {opacity: 100%;}
+  70% {opacity: 100%;}
+  100% {opacity: 0%;}
+}
+.Corrosal-button {
+  width:48px;
+  border: 0px;
+  opacity: 75%;
+  height: min-content;
+  padding: 16px 0px;
+  align-self: center;
+  background-color: black;
+  color:aliceblue;
+  z-index: 10;
+  top:calc( 64px + 30vh - 23.5px);
+  
+}
+
+.Corrosal-button:disabled {
+  opacity: 0.25;
+  pointer-events: none;
+}
+.Cards {
+  position: relative;
+  animation-name: card;
+  animation-duration: 2s;
+  width:'0px'
+  }
+
+  @keyframes card {
+    0%   {width: 0px;}
+    20%   {width: 20%;}
+    40%   {width: 40%;}
+    100% {width: 100%;}
+  }
+  
+
+.Start-right {
+  position: relative;
+  animation-name: example;
+  animation-duration: 2s;
+  z-index: 1;
+  
+}
+
+.Corrosal-button-left {
+  position: absolute;
+  left:0px;
+}
+.Corrosal-button-left:hover {
+  background-color: transparent;
+  color: #282c34;
+  border: 2px solid #282c34;
+  border-left: 0px;
+  cursor: pointer;
+}
+
+.Corrosal-button-right {
+  position: absolute;
+  right:0px;
+}
+
+.Corrosal-button-right:hover {
+  background-color: transparent;
+  color: #282c34;
+  border: 2px solid #282c34;
+  border-right: 0px ;
+  cursor: pointer;
+}
+
+.Header-button:hover {
+  background-color: 'white';
+}
+
+@keyframes slide {
+  0% {width:0%}
+  100% { width: 'fit-content'; }
 }
 
 .App-link {
   color: #61dafb;
 }
+.contact-info {
+  width:100%;
+  animation-name: card;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  }
 
 @keyframes App-logo-spin {
   from {
