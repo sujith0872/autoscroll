@@ -21,7 +21,7 @@ paddingLeft:'8px'
 };
 
 return (
-<div style={{display:'flex',flexDirection:'row',alignItems:'baseline'}}>
+<div style={{display:'flex',flexDirection:'row',alignItems:'baseline',minWidth:'fit-content',flexWrap:'wrap'}}>
 <h3 style={detailNameStyle}>{detailName} - </h3>
 <span style={valueStyle}>{value}</span>
 </div>

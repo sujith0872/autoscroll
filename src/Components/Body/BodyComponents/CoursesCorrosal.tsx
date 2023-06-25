@@ -61,11 +61,13 @@ export const CoursesCorrosal: React.FC = () => {
 
   const width = useWindowWidth();
   const getColumns = (width: number) => {
-    if (width < 600) {
+    if (width <= 400) {
+      return 1;
+    } else if (width < 600) {
       return 2;
     } else if (width < 900) {
       return 3;
-    } else if (width < 1200) {
+    } else if (width <1200) {
       return 4;
     } else {
       return 5;
@@ -77,6 +79,9 @@ export const CoursesCorrosal: React.FC = () => {
   }, [width]);
 
   return (
+    <><div>
+      <h2 className="Title">Some courses offered by us</h2>
+    </div>
     <div
       style={{
         display: "flex",
@@ -119,5 +124,6 @@ export const CoursesCorrosal: React.FC = () => {
         {">"}
       </button>
     </div>
+    </>
   );
 };

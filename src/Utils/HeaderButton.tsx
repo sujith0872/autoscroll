@@ -1,10 +1,12 @@
 import * as React from "react";
 
 export const HeaderButton: React.FC<
-  React.DetailedHTMLProps<
+  {buttonProps : React.DetailedHTMLProps<
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
-  >
-> = (props) => {
-  return <button {...props} className="Header-button">{props.title}</button>;
+  >,
+  menuMode:boolean
+}
+> = ({buttonProps:props,menuMode}) => {
+  return <button {...props} className={!menuMode?"Header-button":"Header-button Menu-button"}>{props.children?props.children:props.title}</button>;
 };

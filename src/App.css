@@ -13,7 +13,21 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.Menu-Pop {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top:64px;
+  right:16px;
+  z-index: 1300
+}
+ 
+.Title {
+  color:darkgreen;
+  text-align: start;
+  margin-left: 16px;
+  overflow-wrap: anywhere;
+}
 footer {
   height: 48px;
   border-top: 1px solid #ccc;
@@ -38,6 +52,14 @@ footer {
   background-color: transparent;
   border: 0px;
   border-left:1px solid #ccc;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Menu-button { 
+  border-bottom: 1px solid #ccc;
+  min-height: 48px;
+  background-color: white;
 }
 .Header-button:hover {
   background-image: linear-gradient(white,#ccc);
@@ -64,6 +86,8 @@ button:hover {
   70% {opacity: 100%;}
   100% {opacity: 0%;}
 }
+
+
 .Corrosal-button {
   width:48px;
   border: 0px;
@@ -144,9 +168,6 @@ button:hover {
 }
 .contact-info {
   width:100%;
-  animation-name: card;
-  animation-duration: 5s;
-  animation-timing-function: linear;
   }
 
 @keyframes App-logo-spin {
